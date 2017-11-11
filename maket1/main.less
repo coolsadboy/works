@@ -1,0 +1,265 @@
+
+@main-width: calc(~"100% - 222px");
+@main-color: rgb(147, 116, 181);
+
+body {
+    margin: 0;
+    box-sizing: content-box;
+}
+
+.back {
+    width: 1200px;
+    position: absolute;
+    left: 50%;
+    margin-left:-600px;
+    opacity: 0.4;
+    top: 0;
+    z-index: -1;
+}
+
+.main-container {
+    max-width: 1200px;
+    min-width: 599px;
+    margin: 10px auto;
+}
+
+.page-title {
+    display: flex;
+    align-content: center;
+    align-items: center;
+
+    .logo {
+        width: 424px;
+        height: 424px;
+        border: 1px solid;
+        margin-left: 60px;
+        
+    }
+
+    .head-text {
+        text-transform: uppercase;
+        font-size: 48px;
+        color: @main-color;
+        margin-left: 48px;
+        margin-top: 36px;
+        letter-spacing: 1px;
+
+        .second-line {
+            position: relative;
+            top: -14px;
+        }
+    }
+}
+
+.products-and-filters-section{
+    margin-top: 29px;
+    border-top: 8px solid rgb(162, 146, 179);
+}
+
+.bg-light {
+    background-color: white;
+}
+
+.navbar {
+     /*Почему при разрешении экрана от 1176 до появления бургер меню едет меню?*/
+     color: rgb(162, 146, 179);
+     min-height: 100px;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     position: relative;
+     z-index: 1;
+     margin: 0 96px;
+     margin-top: 2px;
+
+    .bg-light {
+         background-color: white;
+    }
+    
+    
+    .navbar-collapse {
+        justify-content: flex-end;
+    }
+
+    .navbar-nav {
+        align-items: flex-end;
+    }
+
+    .navbar-link {
+        font-size: 18px;
+        color: rgb(162, 146, 179);
+        position: relative;
+        margin-left: 50px;
+        margin-right: 1px;
+        height: 52px;
+        padding: 0;
+        line-height: 48px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: lightgray;
+        }
+
+        &.active {
+            background-color: lightblue;
+        }
+    }
+
+    .logo {
+        width: 244px;
+        height: 68px;
+        margin-left: 16px;
+        border: 1px solid;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.my-carousel {
+    /* как сделать чтобы зображение полностью влезало в заданную высоту? */
+    margin:0 122px;
+    max-height: 454px;
+
+    .carousel-inner {
+        
+        .carousel-item {
+            height: 454px;
+            overflow: hidden;
+
+        .d-block {
+            height: 100%;
+        }
+      }
+    }
+}
+
+.information {
+    height: 122px;
+    margin: 36px 140px;
+    border-bottom: 2px solid rgb(221, 221, 221);
+    border-top: 2px solid rgb(221, 221, 221);
+    margin-top: 36px;
+    margin-bottom: 10px;
+
+    .info-text {
+        text-align: center;
+        font-size: 22px;
+        font-style: italic;
+        color: rgb(130, 131, 130);
+        margin-top: 7px;
+
+        .info-text-span {
+            font-weight:bold;
+            color: rgb(120, 93, 149);
+        }
+    }
+}
+
+.text-and-product {
+    height: 350px;
+    /* margin-top: 1px; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+
+    @media (max-width: 600px) {
+            max-width: 51%;
+    }
+
+    .product-photo {
+        width: 288px;
+        height: 288px;
+        margin-left: 154px;
+        margin-top: 16px;
+        border: 1px solid;
+        }
+
+    .product-text {
+        width: 604px;
+        height: 278px;
+        margin-left: 10px;
+        margin-top: 54px;
+        padding-left: 18px;
+
+        h2 {
+            margin-bottom: 22px;
+            letter-spacing: -1px;
+            color: rgb(130, 131, 130);
+        }
+
+        .product-text-par {
+            margin-bottom: 3px;
+            font-size: 14px;
+            padding-left: 6px;
+            line-height: 26px;
+            color: rgb(209, 209, 209);
+        }
+
+        .more{
+            margin-right: 4px;
+            text-align: right;
+            font-size: 12px;
+            font-style: italic;
+            color: rgb(209, 209, 209);
+            
+        }
+    }
+}
+
+.feature {
+    height: 48px;
+}
+
+
+
+
+
+.footer-links {
+    /* как указать чтобы правило срабатывало по видимой области а не по размеру футтера?
+      как сделать чтобы не срабатывал перенос одного блока?*/
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    max-height: 70px;
+    margin: 16px 124px;
+        
+        @media (max-width: 800px) {
+            max-width: 50%;
+        }
+
+        @media (max-width: 600px) {
+            max-width: 25%;
+        }
+
+        .link {
+            min-width: 100px;
+            max-width: 25%;
+            background-color: white;
+    
+            @media (max-width: 800px) {
+                max-width: 50%;
+            }
+    
+            @media (max-width: 600px) {
+                max-width: 100%;
+            }
+    
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+}
+
+.footer {
+    height: 62px;
+    /* border: 1px solid; */
+    margin-top: 54px;
+    border-bottom: 10px solid rgb(130, 105, 157);
+}

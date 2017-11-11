@@ -1,0 +1,23 @@
+{
+  "name": "sda",
+  "version": "1.0.0",
+  "description": "sasadsax",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "codeday-clear": "^1.1.4",
+    "cron": "^1.3.0",
+    "html-entities": "^1.2.1",
+    "moment": "^2.19.1",
+    "node-telegram-bot-api": "^0.29.0",
+    "request": "^2.83.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "sacs"
+  }
+}
